@@ -24,14 +24,14 @@ h2{
   color:yellow;
 
 }
+img {
+  width: 100%;
+  border: 1px solid #222;
+}
 header{
   grid-column: 1/-1;
   margin-left: auto;
   margin-right: auto;
-}
-h3{
-  color:yellow;
-  padding:1rem;
 }
 body section{
   grid-column-start: 2;
@@ -40,6 +40,9 @@ section:last-child{
   padding:1rem;
   grid-column-start: 1;
   grid-row:2/4;
+}
+p + h2{
+  font-size: 1.5rem;
 }
 h2~ul{
   font-size: 1.2rem;
@@ -57,4 +60,59 @@ a:hover{
 li:hover{
   background-color: yellow;
   color: black;
+}
+
+@media (max-width: 1024px){
+  body {
+    background-color: rgba(158, 70, 109, 0.5);
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+  }
+  section{
+    border-color: rgba(255, 255, 255, 0.5);
+    border-style: dotted;
+    border-radius: 5px;
+  }
+  h1, h2, h3{
+    color:rgb(77,12,97);
+  }
+  a:hover{
+    background-color: rgba(255, 0, 0, 0);
+  }
+  li:hover{
+    background-color: rgba(255, 0, 0, 0);
+  }
+}
+
+@media (max-width: 450px){
+  html{
+    font-size: 12px;
+  }
+  body {
+    background-color: white;
+    color: black;
+    display:block;
+    width:100%;
+  }
+  picture+p{
+    display:block;
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  a{
+    color:black;
+  }
+  section{
+    padding-left:0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.25rem;
+  }
+  section:nth-child(even){
+    background-color: rgba(144, 232, 231,0.7);
+    border-style: none;
+    border-radius: 0px;
+  }
 }
